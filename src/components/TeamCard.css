@@ -1,0 +1,132 @@
+.team-card {
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 24px;
+  cursor: pointer;
+}
+
+.team-card__glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  opacity: 0.5;
+  filter: blur(30px);
+}
+
+.team-card__flag {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+  animation: float 3s ease-in-out infinite;
+}
+
+.team-card__name {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.team-card__country {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.team-card__stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.team-card__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-card__stat-value {
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.team-card__stat-value--win { color: var(--green-light); }
+.team-card__stat-value--loss { color: var(--red-live); }
+
+.team-card__stat-label {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.team-card__form {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.team-card__form-item {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.team-card__form-item--w {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--green-light);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.team-card__form-item--l {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--red-live);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.team-card__arrow {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.team-card:hover .team-card__arrow {
+  color: var(--green-light);
+  transform: translateX(4px);
+}
+
+.team-card:hover {
+  border-color: var(--green-primary);
+  box-shadow: var(--shadow-glow-green);
+}
+
+.team-card:hover .team-card__flag {
+  animation-play-state: paused;
+  transform: scale(1.1);
+}

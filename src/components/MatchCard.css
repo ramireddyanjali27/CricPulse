@@ -1,0 +1,197 @@
+.match-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.match-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--green-primary), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.match-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-glass-hover);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.match-card:hover::before {
+  opacity: 1;
+}
+
+.match-card--live {
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+.match-card--live::before {
+  background: linear-gradient(90deg, transparent, var(--red-live), transparent);
+  opacity: 1;
+}
+
+.match-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.match-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.match-card__tournament {
+  font-size: 0.8rem;
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.match-card__result-badge {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 3px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.match-card__teams {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.match-card__team {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.match-card__flag {
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+}
+
+.match-card__team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.match-card__team-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.match-card__score {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green-light);
+}
+
+.match-card__score small {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.match-card__yettobat {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.match-card__vs {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 700;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+}
+
+.match-card__result {
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  font-weight: 600;
+  text-align: center;
+  padding: 10px;
+  background: rgba(245, 158, 11, 0.08);
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+  border: 1px solid rgba(245, 158, 11, 0.15);
+}
+
+.match-card__live-info {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 10px;
+  background: rgba(239, 68, 68, 0.05);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(239, 68, 68, 0.1);
+}
+
+.match-card__live-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.match-card__live-stat span {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.match-card__live-stat strong {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.match-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-glass);
+}
+
+.match-card__info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 576px) {
+  .match-card__teams { flex-direction: column; gap: 8px; }
+  .match-card__vs { display: none; }
+  .match-card__live-info { flex-wrap: wrap; }
+}

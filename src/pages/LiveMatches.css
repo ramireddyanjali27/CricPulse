@@ -1,0 +1,36 @@
+.live-header {
+  text-align: center;
+  padding: 40px 0 20px;
+}
+
+.live-header__icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  color: var(--red-live);
+  margin-bottom: 16px;
+}
+
+.live-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 24px;
+  padding-bottom: 60px;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--text-muted);
+}
+
+.empty-state h3 {
+  margin: 16px 0 8px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 576px) {
+  .live-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,135 @@
+.player-profile__header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.player-profile__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--green-primary), var(--blue-electric));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Orbitron', monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  border: 3px solid var(--green-primary);
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+  flex-shrink: 0;
+}
+
+.player-profile__name {
+  font-family: 'Orbitron', monospace;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.player-profile__role {
+  color: var(--green-light);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.player-profile__meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.player-profile__meta span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  padding: 3px 10px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+}
+
+.player-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.player-stats-grid .stat-card {
+  text-align: center;
+}
+
+.player-stat-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+}
+
+.player-form {
+  padding: 24px;
+}
+
+.player-form h3 {
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.player-form__scores {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.player-form__score {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border-glass);
+}
+
+.player-form__score--high {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--green-light);
+}
+
+.player-form__score--low {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+  color: var(--red-live);
+}
+
+.player-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+@media (max-width: 992px) {
+  .player-stats-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .player-profile__header { flex-direction: column; text-align: center; }
+  .player-profile__meta { justify-content: center; }
+  .player-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .player-charts { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 576px) {
+  .player-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}

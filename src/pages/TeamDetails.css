@@ -1,0 +1,129 @@
+.team-detail-header {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.team-detail-header__glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  filter: blur(40px);
+  opacity: 0.6;
+}
+
+.team-detail-header__content {
+  position: relative;
+  z-index: 1;
+}
+
+.team-detail-header__flag {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 12px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.team-detail-header__name {
+  font-family: 'Orbitron', monospace;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.team-detail-header__country {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.team-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.team-detail-section {
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.team-detail-section h3 {
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+.team-form {
+  display: flex;
+  gap: 8px;
+}
+
+.team-form__item {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.team-form__item--w {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--green-light);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.team-form__item--l {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--red-live);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.team-players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.team-recent-match {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.team-recent-match:last-child { border-bottom: none; }
+
+.team-recent-match__opponent {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.team-recent-match__result {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.team-recent-match__result--win { color: var(--green-light); }
+.team-recent-match__result--loss { color: var(--red-live); }
+
+.team-recent-match__date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .team-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-players-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 576px) {
+  .team-recent-match { flex-direction: column; gap: 4px; align-items: flex-start; }
+}

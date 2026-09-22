@@ -1,0 +1,81 @@
+export const tournaments = [
+  {
+    id: 1,
+    name: 'IPL 2026',
+    type: 'T20',
+    year: 2026,
+    teams: ['India', 'Australia', 'England', 'Pakistan', 'South Africa', 'New Zealand'],
+    status: 'Ongoing',
+    startDate: '2026-09-01',
+    endDate: '2026-10-15',
+  },
+  {
+    id: 2,
+    name: 'T20 World Cup 2026',
+    type: 'T20',
+    year: 2026,
+    teams: ['India', 'Australia', 'England', 'Pakistan', 'South Africa', 'New Zealand', 'Sri Lanka', 'West Indies'],
+    status: 'Ongoing',
+    startDate: '2026-09-10',
+    endDate: '2026-10-05',
+  },
+  {
+    id: 3,
+    name: 'ODI Championship',
+    type: 'ODI',
+    year: 2026,
+    teams: ['India', 'Australia', 'England', 'Pakistan', 'South Africa', 'New Zealand'],
+    status: 'Upcoming',
+    startDate: '2026-11-01',
+    endDate: '2026-12-15',
+  },
+  {
+    id: 4,
+    name: 'Test Championship',
+    type: 'Test',
+    year: 2026,
+    teams: ['India', 'Australia', 'England', 'Pakistan', 'South Africa', 'New Zealand'],
+    status: 'Ongoing',
+    startDate: '2026-08-15',
+    endDate: '2026-10-30',
+  },
+];
+
+export const pointsTable = {
+  1: [
+    { pos: 1, team: 'India', flag: '🇮🇳', m: 8, w: 6, l: 2, nr: 0, pts: 12, nrr: 1.25 },
+    { pos: 2, team: 'Australia', flag: '🇦🇺', m: 8, w: 5, l: 3, nr: 0, pts: 10, nrr: 0.85 },
+    { pos: 3, team: 'England', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', m: 8, w: 5, l: 3, nr: 0, pts: 10, nrr: 0.62 },
+    { pos: 4, team: 'Pakistan', flag: '🇵🇰', m: 8, w: 4, l: 4, nr: 0, pts: 8, nrr: 0.15 },
+    { pos: 5, team: 'South Africa', flag: '🇿🇦', m: 8, w: 3, l: 5, nr: 0, pts: 6, nrr: -0.32 },
+    { pos: 6, team: 'New Zealand', flag: '🇳🇿', m: 8, w: 3, l: 5, nr: 0, pts: 6, nrr: -0.45 },
+  ],
+  2: [
+    { pos: 1, team: 'India', flag: '🇮🇳', m: 5, w: 4, l: 1, nr: 0, pts: 8, nrr: 1.58 },
+    { pos: 2, team: 'Australia', flag: '🇦🇺', m: 5, w: 4, l: 1, nr: 0, pts: 8, nrr: 1.12 },
+    { pos: 3, team: 'England', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', m: 5, w: 3, l: 2, nr: 0, pts: 6, nrr: 0.45 },
+    { pos: 4, team: 'Pakistan', flag: '🇵🇰', m: 5, w: 3, l: 2, nr: 0, pts: 6, nrr: 0.28 },
+    { pos: 5, team: 'South Africa', flag: '🇿🇦', m: 5, w: 2, l: 3, nr: 0, pts: 4, nrr: -0.22 },
+    { pos: 6, team: 'New Zealand', flag: '🇳🇿', m: 5, w: 2, l: 3, nr: 0, pts: 4, nrr: -0.55 },
+    { pos: 7, team: 'Sri Lanka', flag: '🇱🇰', m: 5, w: 1, l: 4, nr: 0, pts: 2, nrr: -1.10 },
+    { pos: 8, team: 'West Indies', flag: '🏝️', m: 5, w: 1, l: 4, nr: 0, pts: 2, nrr: -1.35 },
+  ],
+  3: [
+    { pos: 1, team: 'India', flag: '🇮🇳', m: 0, w: 0, l: 0, nr: 0, pts: 0, nrr: 0 },
+    { pos: 2, team: 'Australia', flag: '🇦🇺', m: 0, w: 0, l: 0, nr: 0, pts: 0, nrr: 0 },
+    { pos: 3, team: 'England', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', m: 0, w: 0, l: 0, nr: 0, pts: 0, nrr: 0 },
+    { pos: 4, team: 'Pakistan', flag: '🇵🇰', m: 0, w: 0, l: 0, nr: 0, pts: 0, nrr: 0 },
+    { pos: 5, team: 'South Africa', flag: '🇿🇦', m: 0, w: 0, l: 0, nr: 0, pts: 0, nrr: 0 },
+    { pos: 6, team: 'New Zealand', flag: '🇳🇿', m: 0, w: 0, l: 0, nr: 0, pts: 0, nrr: 0 },
+  ],
+  4: [
+    { pos: 1, team: 'England', flag: '🏴󠁧󠁢󠁥󠁮󠁧󠁿', m: 4, w: 3, l: 1, nr: 0, pts: 30, nrr: 0.85 },
+    { pos: 2, team: 'Australia', flag: '🇦🇺', m: 4, w: 3, l: 1, nr: 0, pts: 30, nrr: 0.62 },
+    { pos: 3, team: 'India', flag: '🇮🇳', m: 4, w: 2, l: 2, nr: 0, pts: 20, nrr: 0.15 },
+    { pos: 4, team: 'Pakistan', flag: '🇵🇰', m: 4, w: 2, l: 2, nr: 0, pts: 20, nrr: -0.12 },
+    { pos: 5, team: 'South Africa', flag: '🇿🇦', m: 4, w: 1, l: 3, nr: 0, pts: 10, nrr: -0.45 },
+    { pos: 6, team: 'New Zealand', flag: '🇳🇿', m: 4, w: 1, l: 3, nr: 0, pts: 10, nrr: -0.58 },
+  ],
+};
+
+export default tournaments;

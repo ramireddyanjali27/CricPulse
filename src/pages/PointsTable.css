@@ -1,0 +1,102 @@
+.tournament-selector {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.tournament-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tournament-btn:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+}
+
+.tournament-btn--active {
+  background: var(--gradient-gold);
+  color: #1a1a1a;
+  border-color: var(--gold-primary);
+}
+
+.tournament-btn--active:hover {
+  color: #1a1a1a;
+}
+
+.points-table-wrapper {
+  padding: 0;
+  overflow: hidden;
+}
+
+.points-table-scroll {
+  overflow-x: auto;
+}
+
+.points-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.points-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-glass);
+  white-space: nowrap;
+}
+
+.points-table td {
+  padding: 14px 20px;
+  font-size: 0.9rem;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  white-space: nowrap;
+}
+
+.points-table__row--qualify {
+  background: rgba(16, 185, 129, 0.03);
+}
+
+.points-table__row--qualify td:first-child {
+  border-left: 3px solid var(--green-primary);
+}
+
+.points-table__pos {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.points-table__team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.points-table__flag {
+  font-size: 1.4rem;
+}
+
+.points-table__wins { color: var(--green-light); font-weight: 600; }
+.points-table__losses { color: var(--red-live); }
+.points-table__pts {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+.points-table__nrr--pos { color: var(--green-light); }
+.points-table__nrr--neg { color: var(--red-live); }
